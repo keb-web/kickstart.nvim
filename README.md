@@ -1,5 +1,26 @@
 # kickstart.nvim
 
+## Keb-Web Configurations:
+
+The goal for this configuration is to get away from Distros and 
+Keep a simple UI. I also want to work less with FileTrees and 
+move over to utilizing Telescope more (mini.files if necessary)
+
+* cyberdream.nvim colorscheme
+* harpoon
+* lualine
+* mini.animate, mini.file, mini.move
+* increased scrolloff to 14
+
+TO ADD:
+- debugger
+- window splits
+- buffer tabs (maybe)
+- new colorscheme (maybe)
+- homescreen
+- notify (maybe)
+- GIT UI
+
 ## Introduction
 
 A starting point for Neovim that is:
