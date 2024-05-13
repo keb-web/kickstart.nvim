@@ -66,6 +66,12 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 14
 
+-- Disabling diagnostics to avoid LSP_Lines duplication
+vim.diagnostic.config { virtual_text = false }
+-- TODO: Might need to keymap the following:
+-- Disable LSP_LINES WITH:
+-- vim.diagnostic.config({ virtual_lines = false })
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -101,6 +107,11 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Window Splitting
+vim.keymap.set('n', '<leader>wv', ':vsplit<cr>', { desc = '[W]indow [V]ertical Split' })
+vim.keymap.set('n', '<leader>wh', ':split<cr>', { desc = '[W]indow [H]orizontal Split' })
+vim.keymap.set('n', '<leader>wq', ':q<cr>', { desc = '[W]indow [Q]uit' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -743,9 +754,9 @@ require('lazy').setup({
 
       -- -- Configure Files with minimal UI
       require('mini.files').setup {
-        mappings = {
-          close = '<leader>e',
-        },
+        -- mappings = {
+        --   close = '<leader>e',
+        -- },
       }
       vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })
 
