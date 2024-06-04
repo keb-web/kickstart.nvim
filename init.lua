@@ -3,12 +3,19 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
+-- vim.g.tundra_biome = 'artic'
 -- [[ Setting options ]]
 -- See `:help vim.opt`
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
+
+-- FOR OBSIDIAN.NVIM
+vim.opt_local.conceallevel = 1
+
+-- for highlight plugin
+vim.opt.termguicolors = true
 
 -- Make line numbers default
 vim.opt.number = true
@@ -70,7 +77,10 @@ vim.opt.scrolloff = 14
 vim.diagnostic.config { virtual_text = false }
 -- TODO: Might need to keymap the following:
 -- Disable LSP_LINES WITH:
--- vim.diagnostic.config({ virtual_lines = false })
+vim.diagnostic.config { virtual_lines = false }
+-- Show line diagnostics automatically in hover window
+vim.o.updatetime = 250
+vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
@@ -309,6 +319,7 @@ require('lazy').setup({
       local builtin = require 'telescope.builtin'
       vim.keymap.set('n', '<leader>sh', builtin.help_tags, { desc = '[S]earch [H]elp' })
       vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = '[S]earch [K]eymaps' })
+      vim.keymap.set('n', '<leader>st', ':TodoTelescope<CR>', { desc = '[S]earch [T]odo' })
       vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = '[S]earch [F]iles' })
       vim.keymap.set('n', '<leader>ss', builtin.builtin, { desc = '[S]earch [S]elect Telescope' })
       vim.keymap.set('n', '<leader>sw', builtin.grep_string, { desc = '[S]earch current [W]ord' })
@@ -702,25 +713,57 @@ require('lazy').setup({
       }
     end,
   },
-
+  -- future options
+  -- monokai-charcoal
+  -- spaceduck
+  -- toast.vim
+  -- spaceduck
+  -- {
+  --   'sam4llis/nvim-tundra',
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require('nvim-tundra').setup {}
+  --     -- vim.g.tundra_biome = 'artic'
+  --     vim.g.tundra_biome = 'arctic' -- 'arctic' or 'jungle'
+  --     vim.opt.background = 'dark'
+  --     vim.cmd 'colorscheme tundra'
+  --   end,
+  -- },
   -- { -- You can easily change to a different colorscheme.
   --   -- Change the name of the colorscheme plugin below, and then
   --   -- change the command in the config to whatever the name of that colorscheme is.
   --   --
   --   -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-  --   'folke/tokyonight.nvim',
-  --   priority = 1000, -- Make sure to load this before all the other start plugins.
+  -- }
+  -- {
+  --   'diegoulloao/neofusion.nvim',
+  --   priority = 1000,
+  --   config = true,
+  --   -- opts = ...,
   --   init = function()
-  --     -- Load the colorscheme here.
-  --     -- Like many other themes, this one has different styles, and you could load
-  --     -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-  --     vim.cmd.colorscheme 'tokyonight-night'
-  --
-  --     -- You can configure highlights by doing something like:
-  --     vim.cmd.hi 'Comment gui=none'
+  --     require('neofusion').setup {
+  --       transparent_mode = true,
+  --     }
+  --     vim.o.background = 'dark'
+  --     vim.cmd [[ colorscheme neofusion ]]
   --   end,
   -- },
+  {
+    'folke/tokyonight.nvim',
 
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    init = function()
+      -- Load the colorscheme here.
+      -- Like many other themes, this one has different styles, and you could load
+      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
+      vim.cmd.colorscheme 'tokyonight-night'
+
+      -- You can configure highlights by doing something like:
+      vim.cmd.hi 'Comment gui=none'
+    end,
+  },
+  --
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -739,26 +782,28 @@ require('lazy').setup({
       --  - ci'  - [C]hange [I]nside [']quote
       require('mini.ai').setup { n_lines = 500 }
 
+      -- TODO: test new surround plugin
+
       -- Add/delete/replace surroundings (brackets, quotes, etc.)
       --
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      require('mini.surround').setup()
+      -- require('mini.surround').setup()
 
       -- Mini-Animate to follow cusor easily
-      require('mini.animate').setup()
+      -- require('mini.animate').setup()
 
       -- Move Lines with (ALT - hjkl)
-      require('mini.move').setup()
+      -- Not working because of yabai
+      -- require('mini.move').setup()
 
       -- -- Configure Files with minimal UI
-      require('mini.files').setup {
-        -- mappings = {
-        --   close = '<leader>e',
-        -- },
-      }
+      require('mini.files').setup {}
       vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })
+
+      -- mini.jump
+      -- require('mini.jump').setup {}
 
       -- -- No Satus Line because it is ugly
       -- -- Simple and easy statusline.
@@ -822,12 +867,14 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the Kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  -- TODO: Learn debug
+  require 'kickstart.plugins.debug',
   require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
-  -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+  -- TODO: Learn gitsigns
+  require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
