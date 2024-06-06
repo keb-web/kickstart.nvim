@@ -1,6 +1,7 @@
 return {
   'm4xshen/hardtime.nvim',
-  enabled = false,
+  -- TODO: maybe change later
+  enabled = true,
   dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
   opts = {},
 }

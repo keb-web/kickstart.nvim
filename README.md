@@ -1,2 +1,1 @@
-
-2 promising mini plugins
+Preview Folder in pop-up mini.files
