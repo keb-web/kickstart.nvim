@@ -30,11 +30,14 @@ return { -- Collection of various small independent plugins/modules
 
     -- -- Configure Files with minimal UI
     require('mini.files').setup {
+      -- TODO: Set preview to true when done with project to not accidentally review important files
       windows = { preview = true },
     }
     vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })
 
     -- mini.jump
     -- require('mini.jump').setup {}
+    --
+    require('mini.notify').setup {}
   end,
 }
