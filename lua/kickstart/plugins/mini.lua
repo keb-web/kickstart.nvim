@@ -15,13 +15,13 @@ return { -- Collection of various small independent plugins/modules
     -- TODO: test new surround plugin
 
     -- Add/delete/replace surroundings (brackets, quotes, etc.)
-    --
+
     -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
     -- - sd'   - [S]urround [D]elete [']quotes
     -- - sr)'  - [S]urround [R]eplace [)] [']
     -- require('mini.surround').setup()
 
-    -- Mini-Animate to follow cusor easily
+    -- Mini-Animate
     -- require('mini.animate').setup()
 
     -- Move Lines with (ALT - hjkl)
@@ -37,7 +37,8 @@ return { -- Collection of various small independent plugins/modules
 
     -- mini.jump
     -- require('mini.jump').setup {}
-    --
+
+    -- mini.notify
     require('mini.notify').setup {}
   end,
 }
