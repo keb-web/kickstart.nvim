@@ -12,6 +12,7 @@ return {
       function()
         require('harpoon'):list():add()
       end,
+      desc = '[H]arpoon file',
     },
     {
       '<leader>h',
@@ -19,13 +20,15 @@ return {
         local harpoon = require 'harpoon'
         harpoon.ui:toggle_quick_menu(harpoon:list())
       end,
-      desc = 'harpoon quick menu',
+      desc = '[h]arpoon quick menu',
     },
+
     {
       '<leader>1',
       function()
         require('harpoon'):list():select(1)
       end,
+      desc = nil,
     },
     {
       '<leader>2',

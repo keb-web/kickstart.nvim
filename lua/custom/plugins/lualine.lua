@@ -1,3 +1,5 @@
+-- TODO: Hide lualine from DAP-UI 'elements'
+
 -- To show Macro recording message in Lualine
 local function show_macro_recording()
   local recording_register = vim.fn.reg_recording()
