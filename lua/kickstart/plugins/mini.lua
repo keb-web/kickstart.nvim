@@ -31,7 +31,7 @@ local footer_art = [[
            | '_| -_| . |___| | | |     |
            |_,_|___|___|    \_/|_|_|_|_|
 ]]
-return { -- Collection of various small independent plugins/modules
+return { -- Collection of various small independent pluins/modules
   'echasnovski/mini.nvim',
   config = function()
     -- require('mini.test').setup()
@@ -89,5 +89,7 @@ return { -- Collection of various small independent plugins/modules
       header = header_art,
       footer = footer_art,
     }
+
+    -- require('mini.hipatterns').setup {}
   end,
 }
