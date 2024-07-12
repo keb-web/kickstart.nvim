@@ -2,7 +2,7 @@
 -- vim.g.tundra_biome = 'artic'
 
 -- FOR OBSIDIAN.NVIM
-vim.opt_local.conceallevel = 1
+vim.opt.conceallevel = 1
 
 -- for highlight plugin
 vim.opt.termguicolors = true
