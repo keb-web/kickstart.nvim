@@ -64,7 +64,9 @@ return { -- Collection of various small independent pluins/modules
     -- -- Configure Files with minimal UI
     require('mini.files').setup {
       -- TODO: Set preview to true when done with project to not accidentally review important files
-      windows = { preview = true },
+      windows = {
+        preview = true,
+      },
     }
     vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })
 
@@ -74,7 +76,7 @@ return { -- Collection of various small independent pluins/modules
     -- require('mini.sessions').setup {}
     --
     -- mini.notify
-    require('mini.notify').setup {}
+    require('mini.notify').setup()
 
     -- mini.starter dashboard
     local starter = require 'mini.starter'
@@ -90,6 +92,8 @@ return { -- Collection of various small independent pluins/modules
       footer = footer_art,
     }
 
-    -- require('mini.hipatterns').setup {}
+    require('mini.hipatterns').setup {}
+
+    require('mini.icons').setup {}
   end,
 }

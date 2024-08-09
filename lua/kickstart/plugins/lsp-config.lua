@@ -7,6 +7,21 @@ return { -- LSP Configuration & Plugins
     { 'folke/neodev.nvim', opts = {} },
   },
   config = function()
+    --border lsp
+    vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
+      -- Use a sharp border with `FloatBorder` highlights
+      border = 'rounded',
+      -- add the title in hover float window
+      title = 'hover',
+    })
+    vim.lsp.handlers['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+      border = 'rounded',
+    })
+    vim.diagnostic.config {
+      float = { border = 'rounded' },
+    }
+    -- require('lspconfig.ui.windows').default_options.border = 'rounded'
+
     -- Brief aside: **What is LSP?**
     --
     -- LSP is an initialism you've probably heard, but might not understand what it is.

@@ -3,19 +3,22 @@ Add Undo Tree Plugin
 
 ###  Possible Plugins 
 - TPOPE Fugitive (currently learning)
-- FOLKE ZEN MODE (testing ..)
+- vim-dadbod-ui  (testing ..)
 - UNDOTREE       (testing ..)
 - dap            (testing ..)
 - scrollbar.nvim
+- hlchunk.nvim (instead of nvim)
 
 ###  Customizastions / future tasks 
-- [] move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
-- [] mardown lsp stuff / helpful plugins???
-- [] Try Dracula theme?
-- [] Better design for lualine
-- [] Maybe no noice?
-- [] good keymapping for md previewer (or complete plugin replacement)
-- [] combine fugitive and gitsigns into one file?
+- [>] sometype of database management plugin
+- [ ] move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
+- [ ] mardown lsp stuff / helpful plugins???
+- [ ] Try Dracula theme?
+- [ ] Better design for lualine
+- [ ] Maybe no noice?
+- [ ] good keymapping for md previewer (or complete plugin replacement)
+- [ ] combine fugitive and gitsigns into one file?
+- [x] mini.symbols
 
 ###  Removed Plugins 
 - flash.nvim    -> i like leap.nvim mo better
