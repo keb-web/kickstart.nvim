@@ -1,8 +1,6 @@
--- NOTE: Plugins can also be configured to run Lua code when they are loaded.
-
-return { -- Useful plugin to show you pending keybinds.
+return {
   'folke/which-key.nvim',
-  event = 'VimEnter', -- Sets the loading event to 'VimEnter'
+  event = 'VimEnter',
   config = function()
     require('which-key').setup()
     require('which-key').add {
@@ -19,8 +17,7 @@ return { -- Useful plugin to show you pending keybinds.
 }
 
 -- - WARNING In mode `n`, <yS> overlaps with <ySS>:
---   - <yS>: Add a surrounding pair around a motion, on new lines (normal mode)
---   - <ySS>: Add a surrounding pair around the current line, on new lines (normal mode)
+--   - <yS>: Add a surrounding pair around a motion, on new lines (normal mode) - <ySS>: Add a surrounding pair around the current line, on new lines (normal mode)
 -- - WARNING In mode `n`, <ys> overlaps with <yss>:
 --   - <ys>: Add a surrounding pair around a motion (normal mode)
 --   - <yss>: Add a surrounding pair around the current line (normal mode)

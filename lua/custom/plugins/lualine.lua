@@ -21,7 +21,7 @@ return {
       options = {
         -- theme = require 'neofusion.lualine',
         -- rest,
-        theme = 'tokyonight',
+        theme = 'catppuccin',
       },
       sections = {
         lualine_c = {
@@ -42,7 +42,7 @@ return {
         end,
       }),
 
-      -- autocmd to refresh Lualine on RecordingLeave
+      -- autocmd to refresh Lualine on RecordingLeave (stole from reddit)
       vim.api.nvim_create_autocmd('RecordingLeave', {
         callback = function()
           -- This is going to seem really weird!

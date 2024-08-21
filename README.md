@@ -1,15 +1,16 @@
 Experiment with mini.notify instead of notify/noice
 Add Undo Tree Plugin
 
-###  Possible Plugins 
+###  Possible Plugins
 - TPOPE Fugitive (currently learning)
 - vim-dadbod-ui  (testing ..)
 - UNDOTREE       (testing ..)
 - dap            (testing ..)
 - scrollbar.nvim
 - hlchunk.nvim (instead of nvim)
+- markview.nvim / markdown.nvim / markdown-oxide
 
-###  Customizastions / future tasks 
+###  Customizations / future tasks 
 - [>] sometype of database management plugin
 - [ ] move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
 - [ ] mardown lsp stuff / helpful plugins???
@@ -19,6 +20,23 @@ Add Undo Tree Plugin
 - [ ] good keymapping for md previewer (or complete plugin replacement)
 - [ ] combine fugitive and gitsigns into one file?
 - [x] mini.symbols
+=======
+- diffview
+- UNDOTREE       (testing ..)
+- dap            (testing ..)
+- scrollbar.nvim 
+
+###  Potential Customizastions / Future Tasks 
+- move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
+- prettier markdown lsp stuff / helpful plugins???
+- Try Dracula theme or Catpuccin... or a way to toggle between the 3
+- Better design for lualine
+- Maybe no noice?
+- good keymapping for md previewer (or complete plugin replacement)
+- combine fugitive and gitsigns into one file?
+- add fugitive automatons IE floating windows and keybinding
+- buffer tab? (currently against this atm)
+- ai autofill (not sure if necessary atm)
 
 ###  Removed Plugins 
 - flash.nvim    -> i like leap.nvim mo better
