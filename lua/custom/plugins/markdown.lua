@@ -2,18 +2,9 @@ return {
   {
     -- obsidian
     'epwalsh/obsidian.nvim',
-    version = '*', -- recommended, use latest release instead of latest commit
+    version = '*',
     lazy = true,
     ft = 'markdown',
-    -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
-    -- event = {
-    -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand'.
-    -- E.g. "BufReadPre " .. vim.fn.expand "~" .. "/my-vault/**.md"
-    -- 'BufReadPre '
-    --   .. vim.fn.expand '~'
-    --   .. '~/Documents/Obsidian-Vault/*.md',
-    -- 'BufNewFile ' .. vim.fn.expand '~' .. '~/Documents/Obsidian-Vault*.md',
-    -- },
     dependencies = {
       'nvim-lua/plenary.nvim',
     },
@@ -24,15 +15,57 @@ return {
           path = '~/Documents/Obsidian-Vault',
         },
       },
-      ui = { enable = false },
+      ui = {
+        enable = false,
+        checkboxes = {
+          -- [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+          -- ["x"] = { char = "", hl_group = "ObsidianDone" },
+          -- [">"] = { char = "", hl_group = "ObsidianRightArrow" },
+          -- ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+          -- ["!"] = { char = "", hl_group = "ObsidianImportant" },
+          [' '] = { char = '☐', hl_group = 'ObsidianTodo' },
+          ['x'] = { char = '', hl_group = 'ObsidianDone' },
+        },
+      },
     },
   },
+
   {
     -- pretty markdown
     'MeanderingProgrammer/render-markdown.nvim',
-    opts = {},
+    -- enabled = false,
+    opts = {
+      heading = {
+        width = 'block',
+        min_width = 50,
+        border = true,
+        backgrounds = {
+          'RenderMarkdownH1Bg',
+          'RenderMarkdownH2Bg',
+          'RenderMarkdownH3Bg',
+          'RenderMarkdownH4Bg',
+          'RenderMarkdownH5Bg',
+          'RenderMarkdownH6Bg',
+        },
+        foregrounds = {
+          'RenderMarkdownH1',
+          'RenderMarkdownH2',
+          'RenderMarkdownH3',
+          'RenderMarkdownH4',
+          'RenderMarkdownH5',
+          'RenderMarkdownH6',
+        },
+      },
+      code = {
+        position = 'right',
+        width = 'block',
+        left_pad = 2,
+        right_pad = 4,
+      },
+    },
     dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' },
   },
+
   {
     -- markdown preview
     'iamcco/markdown-preview.nvim',

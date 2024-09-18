@@ -21,7 +21,8 @@ return {
       options = {
         -- theme = require 'neofusion.lualine',
         -- rest,
-        theme = 'catppuccin',
+        section_separators = { left = '', right = '' },
+        component_separators = { left = '', right = '' },
       },
       sections = {
         lualine_c = {
