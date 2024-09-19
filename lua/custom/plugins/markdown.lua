@@ -1,3 +1,5 @@
+-- still need to add custom highlight colors D^:
+
 return {
   {
     -- obsidian
@@ -20,11 +22,11 @@ return {
         checkboxes = {
           -- [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
           -- ["x"] = { char = "", hl_group = "ObsidianDone" },
-          -- [">"] = { char = "", hl_group = "ObsidianRightArrow" },
           -- ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
           -- ["!"] = { char = "", hl_group = "ObsidianImportant" },
           [' '] = { char = '☐', hl_group = 'ObsidianTodo' },
           ['x'] = { char = '', hl_group = 'ObsidianDone' },
+          ['>'] = { char = '', hl_group = 'ObsidianRightArrow' },
         },
       },
     },
@@ -55,6 +57,13 @@ return {
           'RenderMarkdownH5',
           'RenderMarkdownH6',
         },
+      },
+      render_modes = { 'n', 'v', 'i', 'c' },
+      checkbox = {
+
+        unchecked = { icon = '󰄱 ' },
+        checked = { icon = ' ' },
+        custom = { todo = { raw = '[>]', rendered = '󰥔 ' } },
       },
       code = {
         position = 'right',
