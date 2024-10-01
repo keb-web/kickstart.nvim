@@ -1,4 +1,20 @@
-return { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 }
+--  i want #1a1b26 instead of #1e1e2f
+return {
+  'catppuccin/nvim',
+  name = 'catppuccin',
+  priority = 1000,
+  opts = {
+    background = {
+      light = 'latte',
+      dark = 'mocha',
+    },
+    color_overrides = {
+      mocha = {
+        Mantle = '#1e1e2e',
+      },
+    },
+  },
+}
 -- return {
 --   'tokyonight.nvim',
 --   enabled = false,

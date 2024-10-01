@@ -67,6 +67,7 @@ vim.diagnostic.config { virtual_text = false }
 -- TODO: Might need to keymap the following:
 -- Disable LSP_LINES WITH:
 vim.diagnostic.config { virtual_lines = false }
+
 -- Show line diagnostics automatically in hover window
 vim.o.updatetime = 250
 vim.cmd [[autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]

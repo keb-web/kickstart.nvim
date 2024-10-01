@@ -31,7 +31,10 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Window Splitting
 vim.keymap.set('n', '<leader>wv', ':vsplit<cr>', { desc = '[W]indow [V]ertical Split' })
 vim.keymap.set('n', '<leader>wh', ':split<cr>', { desc = '[W]indow [H]orizontal Split' })
+
+-- Window Save & Quit
 vim.keymap.set('n', '<leader>wq', ':q<cr>', { desc = '[W]indow [Q]uit' })
+vim.keymap.set('n', '<leader>ww', ':w<cr>', { desc = '[W]indow [W]rite' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

@@ -1,5 +1,4 @@
 -- TODO: Hide lualine from DAP-UI 'elements'
-
 -- To show Macro recording message in Lualine
 local function show_macro_recording()
   local recording_register = vim.fn.reg_recording()
@@ -19,7 +18,7 @@ return {
     -- p
     require('lualine').setup {
       options = {
-        -- theme = require 'neofusion.lualine',
+        -- theme = custom_theme,
         -- rest,
         section_separators = { left = '', right = '' },
         component_separators = { left = '', right = '' },

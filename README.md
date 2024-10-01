@@ -1,29 +1,37 @@
-Experiment with mini.notify instead of notify/noice
-Add Undo Tree Plugin
+
+## NVIM motions i want to use more:
+
+open diagnositic with `<leader>q`
+open error message with `<leader>E`
+`[d` or `]d` for moving between diagnostics
+
 
 ###  Possible Plugins
-- TPOPE Fugitive (currently learning)
+- TPOPE Fugitive (currently learning merging)
 - vim-dadbod-ui  (testing ..)
-- UNDOTREE       (testing ..)
-- dap            (testing ..)
-- scrollbar.nvim
-- hlchunk.nvim (instead of nvim)
-- markview.nvim / markdown.nvim / markdown-oxide
+- UNDOTREE       (testing... haven't needed it much yet)
+- dap            (i like!)
+- multicursor.nvim (testing...)
 
 ###  Customizations / future tasks 
+- [ ] add fugitive automatons IE floating windows and keybinding
+- [ ] move tmux to top?
+- [ ] delete telescope buffers when telescope open
+- [ ] diagnostic overlays on paramater tip box... kinda annoying!!
+    Move diagnostic box / set to on toggle?
 - [ ] make background same color as tmux and terminal background colors
 - [ ] fuck lualine use buffers (nicer aesthetic w tmux)
 - [>] sometype of database management plugin
+- [ ] Experiment with mini.notify instead of notify/noice
 - [ ] move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
 - [>] mardown lsp stuff / helpful plugins???
 - [ ] Try Dracula theme?
 - [ ] Better design for lualine
 - [>] Maybe no noice?
-- [!] good keymapping for md previewer (or complete plugin replacement)
+- [ ] good keymapping for md previewer (or complete plugin replacement)
 - [ ] combine fugitive and gitsigns into one file?
 - [x] mini.symbols
 
-###  Potential Customizastions / Future Tasks 
 - move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
 - prettier markdown lsp stuff / helpful plugins???
 - Try Dracula theme or Catpuccin... or a way to toggle between the 3
@@ -31,7 +39,6 @@ Add Undo Tree Plugin
 - Maybe no noice?
 - good keymapping for md previewer (or complete plugin replacement)
 - combine fugitive and gitsigns into one file?
-- add fugitive automatons IE floating windows and keybinding
 - buffer tab? (currently against this atm)
 - ai autofill (not sure if necessary atm)
 
@@ -40,7 +47,6 @@ Add Undo Tree Plugin
 - hardtime.nvim -> yells at me too much
 - trouble.nvim  -> I use Telescope Diagnostics `<leader>sd` more
 - zen-mode.nvim -> Ehhhhhhhhhh
-- screenkeymap  -> Didn't work that well + not needed
 
 ## Current Plugins + Desc.
 ### **Custom plugins**
