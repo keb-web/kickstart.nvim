@@ -19,11 +19,6 @@ require 'lazy-bootstrap'
 -- [[ Configure and Install Plugins ]]
 require 'lazy-plugins'
 
--- require('tokyonight').setup {
---   plugins = { markdown = true },
--- }
-
--- vim.cmd.colorscheme 'tokyonight-night'
 vim.cmd.colorscheme 'catppuccin-mocha'
 
 -- The line beneath this is called `modeline`. See `:help modeline`

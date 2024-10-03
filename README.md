@@ -1,10 +1,8 @@
-
 ## NVIM motions i want to use more:
 
 open diagnositic with `<leader>q`
 open error message with `<leader>E`
 `[d` or `]d` for moving between diagnostics
-
 
 ###  Possible Plugins
 - TPOPE Fugitive (currently learning merging)
@@ -42,6 +40,7 @@ open error message with `<leader>E`
 - buffer tab? (currently against this atm)
 - ai autofill (not sure if necessary atm)
 
+<<<<<<< HEAD
 ###  Removed Plugins 
 - flash.nvim    -> i like leap.nvim mo better
 - hardtime.nvim -> yells at me too much
