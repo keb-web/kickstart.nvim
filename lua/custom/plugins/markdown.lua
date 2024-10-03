@@ -1,5 +1,4 @@
 -- still need to add custom highlight colors D^:
-
 return {
   {
     -- obsidian
