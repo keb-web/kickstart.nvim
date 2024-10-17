@@ -8,6 +8,7 @@ return {
       light = 'latte',
       dark = 'mocha',
     },
+    transparent_background = true,
     color_overrides = {
       mocha = {
         Mantle = '#1e1e2e',
