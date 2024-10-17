@@ -3,6 +3,7 @@
 open diagnositic with `<leader>q`
 open error message with `<leader>E`
 `[d` or `]d` for moving between diagnostics
+`ctrl-d` to delete buffers
 
 ###  Possible Plugins
 - TPOPE Fugitive (currently learning merging)
@@ -12,10 +13,9 @@ open error message with `<leader>E`
 - multicursor.nvim (testing...)
 
 ###  Customizations / future tasks 
-- [ ] add fugitive automatons IE floating windows and keybinding
-- [ ] move tmux to top?
-- [ ] delete telescope buffers when telescope open
-- [ ] diagnostic overlays on paramater tip box... kinda annoying!!
+- [ ] Cleaner telescope UI?
+- [ ] diagnostic overlays on lsp float... kinda annoying!!
+    only happend when no space for lsp near end of file
     Move diagnostic box / set to on toggle?
 - [ ] make background same color as tmux and terminal background colors
 - [ ] fuck lualine use buffers (nicer aesthetic w tmux)
@@ -80,3 +80,6 @@ telescope.lua            -> TELESCOPE RAHHH
 todo.lua                 -> TODO RAHHHH  
 treesitter.lua           -> syntax highlighting  
 which-key.lua            -> for when i get confused :)  
+- [x] add fugitive automatons IE floating windows and keybinding
+- [x] move tmux to top?
+- [x] delete telescope buffers when telescope open
