@@ -6,6 +6,7 @@ return { -- LSP Configuration & Plugins
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     { 'folke/neodev.nvim', opts = {} },
   },
+
   config = function()
     --border lsp
     vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
@@ -19,6 +20,7 @@ return { -- LSP Configuration & Plugins
     })
     vim.diagnostic.config {
       float = { border = 'rounded' },
+      virtual_text = false,
     }
     -- require('lspconfig.ui.windows').default_options.border = 'rounded'
 
