@@ -18,7 +18,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/which-key',
 
-  require 'kickstart/plugins/gitsigns',
+  -- require 'kickstart/plugins/gitsigns',
 
   require 'kickstart/plugins/telescope',
 
