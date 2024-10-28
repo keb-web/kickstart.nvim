@@ -4,48 +4,42 @@ open diagnositic with `<leader>q`
 open error message with `<leader>E`
 `[d` or `]d` for moving between diagnostics
 `ctrl-d` to delete buffers
+'toggle commands' -> `<leader>t` + `m`/`f`/`d` for markdown/fugitive/dadbod
 
 ###  Possible Plugins
 - TPOPE Fugitive (currently learning merging)
 - vim-dadbod-ui  (testing ..)
 - UNDOTREE       (testing... haven't needed it much yet)
 - dap            (i like!)
-- multicursor.nvim (testing...)
+- OIL.nvim instead of mini.files
+
 
 ###  Customizations / future tasks 
 - [ ] Cleaner telescope UI?
 - [ ] diagnostic overlays on lsp float... kinda annoying!!
     only happend when no space for lsp near end of file
     Move diagnostic box / set to on toggle?
-- [ ] make background same color as tmux and terminal background colors
-- [ ] fuck lualine use buffers (nicer aesthetic w tmux)
-- [>] sometype of database management plugin
 - [ ] Experiment with mini.notify instead of notify/noice
-- [ ] move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
-- [>] mardown lsp stuff / helpful plugins???
-- [ ] Try Dracula theme?
 - [ ] Better design for lualine
-- [>] Maybe no noice?
-- [ ] good keymapping for md previewer (or complete plugin replacement)
-- [ ] combine fugitive and gitsigns into one file?
+- [>] ~~Maybe no noice?~~
+    - Maybe yes noice?
+        -[ ] make noice less obnoxious (smaller/minimal)
+- [ ] learn how to fine-tune LSP's
+- [ ] ai autofill (cursor/copilot) (not sure if necessary atm) 
+- [ ] buffer tab? (currently against this atm)
+
+- [x] good keymapping for md previewer (or complete plugin replacement)
+- [x] make background same color as tmux and terminal background colors
+- [x] sometype of database management plugin (DADBOD)
+- [x] mardown lsp stuff / helpful plugins???
+- [x] combine fugitive and gitsigns into one file?
 - [x] mini.symbols
 
-- move da help box that shows aparamters above the cursor (sometimes diagnostics covers it)
-- prettier markdown lsp stuff / helpful plugins???
-- Try Dracula theme or Catpuccin... or a way to toggle between the 3
-- Better design for lualine
-- Maybe no noice?
-- good keymapping for md previewer (or complete plugin replacement)
-- combine fugitive and gitsigns into one file?
-- buffer tab? (currently against this atm)
-- ai autofill (not sure if necessary atm)
-
-<<<<<<< HEAD
 ###  Removed Plugins 
 - flash.nvim    -> i like leap.nvim mo better
 - hardtime.nvim -> yells at me too much
 - trouble.nvim  -> I use Telescope Diagnostics `<leader>sd` more
-- zen-mode.nvim -> Ehhhhhhhhhh
+- multicursor   -> don't really use it for my workflow
 
 ## Current Plugins + Desc.
 ### **Custom plugins**

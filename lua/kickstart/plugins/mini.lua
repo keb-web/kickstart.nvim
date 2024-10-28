@@ -70,13 +70,8 @@ return { -- Collection of various small independent pluins/modules
     }
     vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })
 
-    -- mini.jump
-    -- require('mini.jump').setup {}
-
-    -- require('mini.sessions').setup {}
-    --
     -- mini.notify
-    require('mini.notify').setup()
+    -- require('mini.notify').setup()
 
     -- mini.starter dashboard
     local starter = require 'mini.starter'
@@ -91,9 +86,7 @@ return { -- Collection of various small independent pluins/modules
       header = header_art,
       footer = footer_art,
     }
-
     require('mini.hipatterns').setup {}
-
     require('mini.icons').setup {}
   end,
 }

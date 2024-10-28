@@ -4,7 +4,7 @@ return {
     config = true,
     opts = {},
     keys = {
-      { '<leader>gg', '<cmd>tab G<CR>', desc = '[G]it' },
+      { '<leader>tf', ':tab G<CR>', desc = '[T]oggle [f]ugitive' },
     },
   },
   {

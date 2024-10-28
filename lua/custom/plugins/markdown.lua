@@ -79,7 +79,9 @@ return {
     'iamcco/markdown-preview.nvim',
     cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
     build = 'cd app && yarn install',
-    keys = {},
+    keys = {
+      { '<leader>tm', ':MarkdownPreviewToggle<CR>', desc = '[T]oggle [m]arkdown' },
+    },
     init = function()
       vim.g.mkdp_filetypes = { 'markdown' }
     end,
