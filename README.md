@@ -15,6 +15,9 @@ open error message with `<leader>E`
 
 
 ###  Customizations / future tasks 
+NOTE: the caps doesn't work in mac since karabiner registers caps as ctrl. Need to find a work-a-round
+
+- [] Leader + wr h/j/k/l does a window resize that can be repeated with the '.' operator
 - [ ] Cleaner telescope UI?
 - [ ] diagnostic overlays on lsp float... kinda annoying!!
     only happend when no space for lsp near end of file
@@ -77,3 +80,23 @@ which-key.lua            -> for when i get confused :)
 - [x] add fugitive automatons IE floating windows and keybinding
 - [x] move tmux to top?
 - [x] delete telescope buffers when telescope open
+
+
+```lua
+
+  require("noice").setup({
+    views = {
+      cmdline_popup = {
+        border = {
+          style = "none",
+          padding = { 2, 3 },
+        },
+        filter_options = {},
+        win_options = {
+          winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
+        },
+      },
+    },
+  })
+
+```
