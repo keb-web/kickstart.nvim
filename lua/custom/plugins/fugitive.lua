@@ -1,15 +1,31 @@
 return {
   {
-    'tpope/vim-fugitive',
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'sindrets/diffview.nvim', -- optional - Diff integration
+
+      -- Only one of these is needed.
+      'nvim-telescope/telescope.nvim', -- optional
+    },
     config = true,
-    opts = {},
     keys = {
-      { '<leader>tf', ':tab G<CR>', desc = '[T]oggle [f]ugitive' },
+      { '<leader>tn', ':Neogit<CR>', desc = '[T]oggle [N]eogit' },
     },
   },
   {
-    'sindrets/diffview.nvim',
+    'tpope/vim-fugitive',
+    config = true,
+    enabled = false,
+    opts = {},
+    keys = {
+      { '<leader>tf', ':tab G<CR>', desc = '[T]oggle [f]ugitive' },
+      { '<leader>tB', ':Git branch<CR>', desc = '[T]oggle [B]ranch' },
+    },
   },
+  -- {
+  --   'sindrets/diffview.nvim',
+  -- },
   {
     'lewis6991/gitsigns.nvim',
     opts = {

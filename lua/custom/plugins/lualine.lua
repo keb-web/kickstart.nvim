@@ -20,8 +20,8 @@ return {
       options = {
         -- theme = custom_theme,
         -- rest,
-        section_separators = { left = '', right = '' },
-        component_separators = { left = '', right = '' },
+        section_separators = { '|' },
+        component_separators = { '|' },
       },
       sections = {
         lualine_c = {

@@ -35,6 +35,7 @@ vim.keymap.set('n', '<leader>wh', ':split<cr>', { desc = '[W]indow [H]orizontal 
 -- Window Save & Quit
 vim.keymap.set('n', '<leader>wq', ':q<cr>', { desc = '[W]indow [Q]uit' })
 vim.keymap.set('n', '<leader>ww', ':w<cr>', { desc = '[W]indow [W]rite' })
+vim.keymap.set('n', '<leader>wQ', ':q!<cr>', { desc = '[W]indow [W]rite' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`

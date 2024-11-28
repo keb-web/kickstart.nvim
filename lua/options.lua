@@ -1,6 +1,15 @@
 -- [[ Setting options ]]
 -- vim.g.tundra_biome = 'artic'
 
+-- -- FOR REST.nvim
+-- ---@type rest.Opts
+-- vim.g.rest_nvim = {}
+
+-- tabs
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 0
+vim.opt.shiftwidth = 2
+
 -- FOR OBSIDIAN.NVIM
 vim.opt.conceallevel = 1
 
