@@ -17,6 +17,9 @@ return {
     },
     opts = {
       graph_style = 'kitty',
+      integrations = {
+        diffview = true,
+      },
     },
   },
   {
