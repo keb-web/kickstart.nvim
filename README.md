@@ -1,9 +1,19 @@
-## NVIM motions i want to use more:
+<!-- mtoc-start -->
+
+* [Possible Plugins](#possible-plugins)
+  * [Customizations / future tasks ](#customizations--future-tasks-)
+  * [Removed Plugins ](#removed-plugins-)
+* [Current Plugins + Desc.](#current-plugins--desc)
+  * [**Custom plugins**](#custom-plugins)
+  * [**kickstart-nvim plugins**  ](#kickstart-nvim-plugins--)
+
+<!-- mtoc-end -->
 
 open diagnositic with `<leader>q`
 open error message with `<leader>E`
 `[d` or `]d` for moving between diagnostics
 `ctrl-d` to delete buffers
+
 'toggle commands' -> `<leader>t` + `m`/`f`/`d` for markdown/fugitive/dadbod
 
 ###  Possible Plugins
@@ -11,7 +21,7 @@ open error message with `<leader>E`
 - vim-dadbod-ui  (testing ..)
 - UNDOTREE       (testing... haven't needed it much yet)
 - dap            (i like!)
-- OIL.nvim instead of mini.files
+- OIL.nvim instead of mini.files??
 
 
 ###  Customizations / future tasks 

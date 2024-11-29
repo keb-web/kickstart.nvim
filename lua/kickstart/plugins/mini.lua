@@ -66,6 +66,8 @@ return { -- Collection of various small independent pluins/modules
       -- TODO: Set preview to true when done with project to not accidentally review important files
       windows = {
         preview = true,
+        width_focus = 30,
+        width_preview = 30,
       },
     }
     vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })

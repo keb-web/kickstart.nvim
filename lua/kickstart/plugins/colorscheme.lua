@@ -1,21 +1,101 @@
 --  i want #1a1b26 instead of #1e1e2f
+--  might change to normal one-dark instead of onedarkdark
 return {
-  'catppuccin/nvim',
-  name = 'catppuccin',
-  priority = 1000,
-  opts = {
-    background = {
-      light = 'latte',
-      dark = 'mocha',
-    },
-    transparent_background = true,
-    color_overrides = {
-      mocha = {
-        Mantle = '#1e1e2e',
-      },
-    },
-  },
+  'olimorris/onedarkpro.nvim',
+  priority = 1000, -- Ensure it loads first
+  config = function()
+    local color = require 'onedarkpro.helpers'
+    local colors = color.get_colors()
+
+    -- print(vim.inspect(colors))
+    -- local TelescopeColor = {}
+  end,
 }
+--   background = "dark",
+--   bg = "#282c34",
+--   bg_statusline = "#22262d",
+--   black = "#282c34",
+--   blue = "#61afef",
+--   color_column = "#2d313b",
+--   comment = "#7f848e",
+--   cursorline = "#2d313b",
+--   cyan = "#56b6c2",
+--   diff_add = "#003e4a",
+--   diff_delete = "#501b20",
+--   diff_text = "#005869",
+--   fg = "#abb2bf",
+--   fg_gutter = "#3d4350",
+--   fg_gutter_inactive = "#abb2bf",
+--   float_bg = "#21252b",
+--   fold = "#30333d",
+--   git_add = "#109868",
+--   git_change = "#948B60",
+--   git_delete = "#9a353d",
+--   git_hunk_add = "#43554d",
+--   git_hunk_add_inline = "#3f534f",
+--   git_hunk_change_inline = "#41483d",
+--   git_hunk_delete = "#502d30",
+--   git_hunk_delete_inline = "#6f2e2d",
+--   gray = "#5c6370",
+--   green = "#98c379",
+--   highlight = "#e2be7d",
+--   indentline = "#3b4048",
+--   inlay_hint = "#4c525c",
+--   line_number = "#495162",
+--   name = "onedark",
+--   none = "NONE",
+--   orange = "#d19a66",
+--   purple = "#c678dd",
+--   red = "#e06c75",
+--   selection = "#414858",
+--   virtual_text_error = "#e8939a",
+--   virtual_text_hint = "#7ec7d1",
+--   virtual_text_information = "#90c7f4",
+--   virtual_text_warning = "#edd2a1",
+--   white = "#abb2bf",
+--   yellow = "#e5c07b"
+
+-- vim.cmd("colorscheme onedark")
+
+-- return {
+--   'catppuccin/nvim',
+--   name = 'catppuccin',
+--   priority = 1000,
+--   config = function()
+--     local colors = require('catppuccin.palettes').get_palette()
+--     local TelescopeColor = {
+--       TelescopeMatching = { fg = colors.flamingo },
+--       TelescopeSelection = { fg = colors.text, bg = colors.surface0, bold = true },
+--       TelescopePromptPrefix = { bg = colors.surface0 },
+--       TelescopePromptNormal = { bg = colors.surface0 },
+--       TelescopeResultsNormal = { bg = colors.mantle },
+--       TelescopePreviewNormal = { bg = colors.mantle },
+--       TelescopePromptBorder = { bg = colors.surface0, fg = colors.surface0 },
+--       TelescopeResultsBorder = { bg = colors.mantle, fg = colors.mantle },
+--       TelescopePreviewBorder = { bg = colors.mantle, fg = colors.mantle },
+--       TelescopePromptTitle = { bg = colors.pink, fg = colors.mantle },
+--       TelescopeResultsTitle = { fg = colors.mantle },
+--       TelescopePreviewTitle = { bg = colors.green, fg = colors.mantle },
+--     }
+--     for hl, col in pairs(TelescopeColor) do
+--       vim.api.nvim_set_hl(0, hl, col)
+--     end
+--
+--     require('catppuccin').setup {
+--       background = {
+--         light = 'latte',
+--         dark = 'mocha',
+--       },
+--       transparent_background = true,
+--       color_overrides = {
+--         mocha = {
+--           Mantle = '#1e1e2e',
+--         },
+--       },
+--     }
+--   end,
+-- }
+
 -- return {
 --   'tokyonight.nvim',
 --   enabled = false,

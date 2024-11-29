@@ -42,8 +42,8 @@ return { -- Autocompletion
 
     cmp.setup {
       window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
+        -- completion = cmp.config.window.bordered(),
+        -- documentation = cmp.config.window.bordered(),
       },
 
       snippet = {
@@ -108,6 +108,7 @@ return { -- Autocompletion
       },
       sources = {
         { name = 'nvim_lsp_signature_help' },
+        { name = 'snippets', keyword_length = 3 },
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
         { name = 'path' },
