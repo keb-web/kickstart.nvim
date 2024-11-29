@@ -7,22 +7,98 @@ return {
 
       -- Only one of these is needed.
       'nvim-telescope/telescope.nvim', -- optional
+      'isakbm/gitgraph.nvim',
     },
     config = true,
     keys = {
       { '<leader>tn', ':Neogit<CR>', desc = '[T]oggle [N]eogit' },
+      -- TODO: should prob move this to telescope file
+      { '<leader>sB', ':Telescope git_branches<CR>', desc = '[S]earch [B]ranches' },
+    },
+    opts = {
+      graph_style = 'kitty',
     },
   },
   {
-    'tpope/vim-fugitive',
-    config = true,
-    enabled = false,
-    opts = {},
+    'isakbm/gitgraph.nvim',
+    dependencies = {
+      'sindrets/diffview.nvim',
+    },
+    opts = {
+      hooks = {
+        -- Check diff of a commit
+        on_select_commit = function(commit)
+          vim.notify('DiffviewOpen ' .. commit.hash .. '^!')
+          vim.cmd(':DiffviewOpen ' .. commit.hash .. '^!')
+        end,
+        -- Check diff from commit a -> commit b
+        on_select_range_commit = function(from, to)
+          vim.notify('DiffviewOpen ' .. from.hash .. '~1..' .. to.hash)
+          vim.cmd(':DiffviewOpen ' .. from.hash .. '~1..' .. to.hash)
+        end,
+      },
+
+      symbols = {
+        merge_commit = '',
+        commit = '',
+        merge_commit_end = '',
+        commit_end = '',
+
+        -- Advanced symbols
+        GVER = '',
+        GHOR = '',
+        GCLD = '',
+        GCRD = '╭',
+        GCLU = '',
+        GCRU = '',
+        GLRU = '',
+        GLRD = '',
+        GLUD = '',
+        GRUD = '',
+        GFORKU = '',
+        GFORKD = '',
+        GRUDCD = '',
+        GRUDCU = '',
+        GLUDCD = '',
+        GLUDCU = '',
+        GLRDCL = '',
+        GLRDCR = '',
+        GLRUCL = '',
+        GLRUCR = '',
+      },
+      format = {
+        timestamp = '%H:%M:%S %d-%m-%Y',
+        fields = { 'hash', 'timestamp', 'author', 'branch_name', 'tag' },
+      },
+      hooks = {
+        on_select_commit = function(commit)
+          print('selected commit:', commit.hash)
+        end,
+        on_select_range_commit = function(from, to)
+          print('selected range:', from.hash, to.hash)
+        end,
+      },
+    },
     keys = {
-      { '<leader>tf', ':tab G<CR>', desc = '[T]oggle [f]ugitive' },
-      { '<leader>tB', ':Git branch<CR>', desc = '[T]oggle [B]ranch' },
+      {
+        '<leader>gl',
+        function()
+          require('gitgraph').draw({}, { all = true, max_count = 5000 })
+        end,
+        desc = 'GitGraph - Draw',
+      },
     },
   },
+  -- { starting to like neogit more
+  --   'tpope/vim-fugitive',
+  --   config = true,
+  --   enabled = false,
+  --   opts = {},
+  --   keys = {
+  --     { '<leader>tf', ':tab G<CR>', desc = '[T]oggle [f]ugitive' },
+  --     { '<leader>tB', ':Git branch<CR>', desc = '[T]oggle [B]ranch' },
+  --   },
+  -- },
   -- {
   --   'sindrets/diffview.nvim',
   -- },
