@@ -1,5 +1,6 @@
 -- AI / Cursor-like plugin
 return {
+  enabled = false,
   'yetone/avante.nvim',
   event = 'VeryLazy',
   lazy = false,

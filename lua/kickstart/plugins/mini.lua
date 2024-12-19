@@ -31,12 +31,10 @@ local footer_art = [[
            | '_| -_| . |___| | | |     |
            |_,_|___|___|    \_/|_|_|_|_|
 ]]
+
 return { -- Collection of various small independent pluins/modules
   'echasnovski/mini.nvim',
   config = function()
-    -- require('mini.test').setup()
-    -- require('mini.basics').setup()
-
     -- Better Around/Inside textobjects
     --
     -- Examples:
@@ -45,7 +43,9 @@ return { -- Collection of various small independent pluins/modules
     --  - ci'  - [C]hange [I]nside [']quote
     require('mini.ai').setup { n_lines = 500 }
 
-    require('mini.sessions').setup {}
+    -- require('mini.sessions').setup {}
+
+    require('mini.pairs').setup {}
 
     require('mini.files').setup {
       -- TODO: Set preview to true when done with project to not accidentally review important files

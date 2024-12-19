@@ -1,75 +1,68 @@
 <!-- mtoc-start -->
 
-* [Possible Plugins](#possible-plugins)
-  * [Customizations / future tasks ](#customizations--future-tasks-)
-  * [Removed Plugins ](#removed-plugins-)
-* [Current Plugins + Desc.](#current-plugins--desc)
-  * [**Custom plugins**](#custom-plugins)
-  * [**kickstart-nvim plugins**  ](#kickstart-nvim-plugins--)
+* [My Nvim Config  (WIP)](#my-nvim-config--wip)
+  * [Learn These Keymappings](#learn-these-keymappings)
+    * [Possible Plugins](#possible-plugins)
+    * [Customizations / future tasks ](#customizations--future-tasks-)
+  * [Current Plugins + Desc.](#current-plugins--desc)
+    * [**Custom plugins**](#custom-plugins)
+    * [**kickstart-nvim plugins**  ](#kickstart-nvim-plugins--)
 
 <!-- mtoc-end -->
 
+# My Nvim Config  (WIP)
+## Learn These Keymappings
 open diagnositic with `<leader>q`
 open error message with `<leader>E`
 `[d` or `]d` for moving between diagnostics
 `ctrl-d` to delete buffers
-
 'toggle commands' -> `<leader>t` + `m`/`f`/`d` for markdown/fugitive/dadbod
 
 ###  Possible Plugins
-- TPOPE Fugitive (currently learning merging)
+
 - vim-dadbod-ui  (testing ..)
 - UNDOTREE       (testing... haven't needed it much yet)
-- dap            (i like!)
-- OIL.nvim instead of mini.files??
-
+- yazi/OIL.nvim instead of mini.files??
 
 ###  Customizations / future tasks 
-NOTE: the caps doesn't work in mac since karabiner registers caps as ctrl. Need to find a work-a-round
 
-- [] Leader + wr h/j/k/l does a window resize that can be repeated with the '.' operator
-- [ ] Cleaner telescope UI?
-- [ ] diagnostic overlays on lsp float... kinda annoying!!
-    only happend when no space for lsp near end of file
-    Move diagnostic box / set to on toggle?
+- [ ] Snacks Snacks Snacks!!!
+- [ ] Add 'toggle Undotree' keymap
+- [ ] Integrate NvChad aesthestics
+- [ ] Remove plugins disabled/replaced by snacks.nvim
+- [ ] Leader + wr h/j/k/l does a window resize that can be repeated with the '.' operator
 - [ ] Experiment with mini.notify instead of notify/noice
-- [ ] Better design for lualine
-- [>] ~~Maybe no noice?~~
-    - Maybe yes noice?
-        -[ ] make noice less obnoxious (smaller/minimal)
 - [ ] learn how to fine-tune LSP's
 - [ ] ai autofill (cursor/copilot) (not sure if necessary atm) 
 - [ ] buffer tab? (currently against this atm)
-
-- [x] good keymapping for md previewer (or complete plugin replacement)
-- [x] make background same color as tmux and terminal background colors
-- [x] sometype of database management plugin (DADBOD)
-- [x] mardown lsp stuff / helpful plugins???
-- [x] combine fugitive and gitsigns into one file?
-- [x] mini.symbols
-
-###  Removed Plugins 
-- flash.nvim    -> i like leap.nvim mo better
-- hardtime.nvim -> yells at me too much
-- trouble.nvim  -> I use Telescope Diagnostics `<leader>sd` more
-- multicursor   -> don't really use it for my workflow
+- [ ] simplify file structure of config???
+- [ ] clean up docs for others to use (task for wayyyy in the future)
 
 ## Current Plugins + Desc.
 ### **Custom plugins**
+avante.lua               ->
 codeSnap.lua             -> Take screenshots of highlighted code with `:CodeSnap`  
-fugitive.lua             -> Git Wrapper  
+dadbod.lua               ->
+fugitive.lua             -> Git Wrapper
+git.lua                  ->
 harpoon.lua              -> Quick file marking/hopping  
 highlightColors.lua      -> Highlights color codes like #98dc80  
+init.lua                 ->
 leap.lua                 -> File traversal by leaping to char with `s<char><char>`  
 leetCode.lua             -> leetcode, but in nvim  
 lualine.lua              -> bar at da bottom. Added macro recording thingy  
+markdown.lua             ->
 marks.lua                -> Shows marks made by "m<char>" on da left  
-md-previewer.lua         -> Previews markdown files  
 noice.lua                -> Nice command prompt  
 nvim-tmux-navigator.lua  -> Seemless navigation between nvim and tmux panes with `ctrl+hjkl`  
-obsidian.lua             -> obsidian, but in nvim  
+prettyDiagnostics.lua    ->
+rest.lua                 ->
+screenkey.lua            ->
+snacks.lua               ->
 surround.lua             -> surround, change, or delete characters in selected block  
+undotree.lua             ->
 vim-be-good.lua          -> games, but in vim B^)  
+
 
 ### **kickstart-nvim plugins**  
 autopairs.lua            -> auto add closing thingies  
@@ -87,26 +80,4 @@ telescope.lua            -> TELESCOPE RAHHH
 todo.lua                 -> TODO RAHHHH  
 treesitter.lua           -> syntax highlighting  
 which-key.lua            -> for when i get confused :)  
-- [x] add fugitive automatons IE floating windows and keybinding
-- [x] move tmux to top?
-- [x] delete telescope buffers when telescope open
 
-
-```lua
-
-  require("noice").setup({
-    views = {
-      cmdline_popup = {
-        border = {
-          style = "none",
-          padding = { 2, 3 },
-        },
-        filter_options = {},
-        win_options = {
-          winhighlight = "NormalFloat:NormalFloat,FloatBorder:FloatBorder",
-        },
-      },
-    },
-  })
-
-```

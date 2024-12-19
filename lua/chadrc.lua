@@ -19,18 +19,23 @@ M.nvdash = {
     '																							 ',
   },
   buttons = {
-    { txt = '  Search File', keys = 'f', cmd = 'Telescope find_files' },
-    { txt = '  Search Recent Files', keys = 'r', cmd = 'Telescope oldfiles' },
-    { txt = '󰈭  Search Grep', keys = 'g', cmd = 'Telescope live_grep' },
+    { txt = '  Files', keys = 'f', cmd = 'Telescope find_files' },
+    { txt = '  Recent Files', keys = 'r', cmd = 'Telescope oldfiles' },
+    { txt = '󰈭  Grep', keys = 'g', cmd = 'Telescope live_grep' },
     -- { txt = '  Bookmarks', keys = 'Spc s m', cmd = 'Telescope marks' },
+    { txt = '✺  Session', keys = 's', cmd = "require('persistence').load()" },
     -- { txt = '  Themes', keys = 'Spc t h', cmd = 'Telescope themes' },
     -- { txt = '  Mappings', keys = 'Spc c h', cmd = 'NvCheatsheet' },
   },
 }
 
+-- require('persistence').load()
+
 M.ui = {
   tabufline = { enabled = false },
   statusline = { theme = 'minimal' },
+  telescope = { style = 'borderless' },
+  cmp = { style = 'atom_colored' },
 }
 
 M.term = {
@@ -47,11 +52,18 @@ M.term = {
 vim.keymap.set({ 'n', 't' }, '<A-i>', function()
   require('nvchad.term').toggle { pos = 'float', id = 'floatTerm' }
 end)
+
+-- terminal mappings
 vim.keymap.set({ 'n', 't' }, '<leader>tt', function()
   require('nvchad.themes').open {}
 end, { desc = '[T]oggle [t]hemes' })
-vim.keymap.set({ 'n', 't' }, '<leader>lg', function()
+
+vim.keymap.set({ 'n', 't' }, '<A-g>', function()
   require('nvchad.term').toggle { pos = 'float', id = 'fa', cmd = 'lazygit' }
-end, { desc = '[L]azy [G]it' })
+end)
+
+vim.keymap.set({ 'n', 't' }, '<A-y>', function()
+  require('nvchad.term').toggle { pos = 'float', id = 'fa', cmd = 'yazi' }
+end)
 
 return M

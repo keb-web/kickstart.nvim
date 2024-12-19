@@ -3,6 +3,8 @@
 --
 
 return {
+  -- testing mini pairs
+  enabled = false,
   'windwp/nvim-autopairs',
   event = 'InsertEnter',
   -- Optional dependency
