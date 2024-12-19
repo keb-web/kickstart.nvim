@@ -14,7 +14,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/colorscheme',
+  -- require 'kickstart/plugins/colorscheme',
 
   require 'kickstart/plugins/which-key',
 

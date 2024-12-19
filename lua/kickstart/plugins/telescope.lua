@@ -42,15 +42,15 @@ return { -- Fuzzy Finder (files, lsp, etc)
       pickers = {
         find_files = {
           layout_config = {
-            preview_width = 0.7,
-            width = 0.9,
+            -- preview_width = 0.7,
+            -- width = 0.9,
             -- other layout configuration here
           },
         },
         live_grep = {
           layout_config = {
-            preview_width = 0.7,
-            width = 0.9,
+            -- preview_width = 0.7,
+            -- width = 0.9,
             -- other layout configuration here
           },
         },

@@ -1,6 +1,7 @@
 --  i want #1a1b26 instead of #1e1e2f
 --  might change to normal one-dark instead of onedarkdark
 return {
+  enabled = false,
   'olimorris/onedarkpro.nvim',
   priority = 1000, -- Ensure it loads first
   config = function()
