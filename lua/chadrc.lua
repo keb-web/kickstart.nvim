@@ -23,9 +23,22 @@ M.nvdash = {
     { txt = '  Recent Files', keys = 'r', cmd = 'Telescope oldfiles' },
     { txt = '󰈭  Grep', keys = 'g', cmd = 'Telescope live_grep' },
     -- { txt = '  Bookmarks', keys = 'Spc s m', cmd = 'Telescope marks' },
-    { txt = '✺  Session', keys = 's', cmd = "require('persistence').load()" },
+    { txt = '✺  Session', keys = 's', cmd = "lua require('persistence').load()" },
+    { txt = '✘  Quit', keys = 'q', cmd = ':q' },
     -- { txt = '  Themes', keys = 'Spc t h', cmd = 'Telescope themes' },
-    -- { txt = '  Mappings', keys = 'Spc c h', cmd = 'NvCheatsheet' },
+    { txt = '─', hl = 'NvDashFooter', no_gap = true, rep = true },
+
+    {
+      txt = function()
+        local stats = require('lazy').stats()
+        local ms = math.floor(stats.startuptime) .. ' ms'
+        return '  Loaded ' .. stats.loaded .. '/' .. stats.count .. ' plugins in ' .. ms
+      end,
+      hl = 'NvDashFooter',
+      no_gap = true,
+    },
+
+    { txt = '─', hl = 'NvDashFooter', no_gap = true, rep = true },
   },
 }
 
