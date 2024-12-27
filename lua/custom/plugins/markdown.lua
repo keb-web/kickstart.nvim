@@ -76,7 +76,7 @@ return {
   {
     -- pretty markdown
     'MeanderingProgrammer/render-markdown.nvim',
-    -- enabled = false,
+    enabled = false,
     opts = {
       heading = {
         width = 'block',
