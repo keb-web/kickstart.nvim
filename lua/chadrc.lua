@@ -2,7 +2,7 @@ local M = {}
 
 M.base46 = {
   theme = 'yoru',
-  transparency = true, -- with transparency on light mode won't work that well
+  -- transparency = true, -- with transparency on light mode won't work that well
 }
 
 M.nvdash = {
@@ -42,12 +42,17 @@ M.nvdash = {
   },
 }
 
--- require('persistence').load()
-
 M.ui = {
+  telescope = { style = 'borderless' },
   tabufline = { enabled = false },
   statusline = { theme = 'minimal' },
-  telescope = { style = 'borderless' },
+
+  lsp = { signature = true },
+  cheatsheet = {
+    theme = 'simple', -- simple/grid
+    -- excluded_groups = { 'terminal (t)', 'autopairs', 'Nvim', 'Opens' }, -- can add group name or with mode
+  },
+
   cmp = { style = 'atom_colored' },
 }
 

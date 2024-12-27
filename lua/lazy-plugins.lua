@@ -12,6 +12,15 @@ require('lazy').setup({
 
   { 'numToStr/Comment.nvim', opts = {} },
 
+  -- testing new lsp config using chadrc
+  {
+    'neovim/nvim-lspconfig',
+    event = 'User FilePost',
+    config = function()
+      require('configs.lspconfig').defaults()
+    end,
+  },
+
   require 'kickstart/plugins/cmp',
 
   -- require 'kickstart/plugins/colorscheme',
@@ -22,7 +31,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/telescope',
 
-  require 'kickstart/plugins/lsp-config',
+  -- require 'kickstart/plugins/lsp-config',
 
   require 'kickstart/plugins/conform',
 
