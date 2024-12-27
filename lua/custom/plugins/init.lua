@@ -6,7 +6,7 @@
 -- testing ts-comments and lazydev
 vim.keymap.set('n', '<leader>ts', function()
   require('persistence').load()
-end, { desc = '[T]oggle  [S]ession' })
+end, { desc = '[T]oggle [S]ession' })
 
 return {
   {
