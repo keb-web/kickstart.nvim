@@ -1,4 +1,4 @@
-eturn { -- LSP Configuration & Plugins
+return { -- LSP Configuration & Plugins
   'neovim/nvim-lspconfig',
   dependencies = {
     { 'williamboman/mason.nvim', config = true }, -- NOTE: Must be loaded before dependants
@@ -8,8 +8,6 @@ eturn { -- LSP Configuration & Plugins
   },
 
   config = function()
-    require 'configs.lspconfig'
-
     --border lsp
     vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
       -- Use a sharp border with `FloatBorder` highlights

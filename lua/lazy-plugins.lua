@@ -13,13 +13,21 @@ require('lazy').setup({
   { 'numToStr/Comment.nvim', opts = {} },
 
   -- testing new lsp config using chadrc
-  {
-    'neovim/nvim-lspconfig',
-    event = 'User FilePost',
-    config = function()
-      require('configs.lspconfig').defaults()
-    end,
-  },
+ -- {
+ --    "williamboman/mason.nvim",
+ --    cmd = { "Mason", "MasonInstall", "MasonInstallAll", "MasonUpdate" },
+ --    opts = function()
+ --      return require "lua.configs.mason"
+ --    end,
+ --  },
+ --
+ --  {
+ --    "neovim/nvim-lspconfig",
+ --    event = "User FilePost",
+ --    config = function()
+ --      require("lua.configs.lspconfig").defaults()
+ --    end,
+ --  },
 
   require 'kickstart/plugins/cmp',
 
@@ -31,7 +39,7 @@ require('lazy').setup({
 
   require 'kickstart/plugins/telescope',
 
-  -- require 'kickstart/plugins/lsp-config',
+  require 'kickstart/plugins/lsp-config',
 
   require 'kickstart/plugins/conform',
 
