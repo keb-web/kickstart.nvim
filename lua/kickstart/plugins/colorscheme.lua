@@ -4,13 +4,6 @@ return {
   enabled = false,
   'olimorris/onedarkpro.nvim',
   priority = 1000, -- Ensure it loads first
-  config = function()
-    local color = require 'onedarkpro.helpers'
-    local colors = color.get_colors()
-
-    -- print(vim.inspect(colors))
-    -- local TelescopeColor = {}
-  end,
 }
 --   background = "dark",
 --   bg = "#282c34",

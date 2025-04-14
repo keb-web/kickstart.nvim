@@ -55,7 +55,7 @@ return { -- Collection of various small independent pluins/modules
         width_preview = 30,
       },
     }
-    vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = 'MiniFile [E]xplorer' })
+    vim.keymap.set('n', '<leader>e', ':lua MiniFiles.open()<CR>', { noremap = true, silent = true, desc = '[E]xplorer' })
 
     -- mini.starter dashboard
     -- local starter = require 'mini.starter'
